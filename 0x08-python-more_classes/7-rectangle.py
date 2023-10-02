@@ -64,7 +64,7 @@ class Rectangle:
         """Return the printable representation of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ("")
-         res = []
+        res = []
         for i in range(self.__height):
             [res.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
@@ -77,7 +77,7 @@ class Rectangle:
         res += ", " + str(self.__height) + ")"
         return (res)
 
-     def __del__(self):
+    def __del__(self):
         """Print a message for every deletion of a Rectangle."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
