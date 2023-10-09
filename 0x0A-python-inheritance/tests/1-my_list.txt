@@ -125,13 +125,3 @@ Empty lists.
     >>> my_list = MyList()
     >>> my_list.print_sorted()
     []
-
-If ``print_sorted(...)`` is called on a list of different types, a TypeError
-will be raised.
-
-::
-
-    >>> my_list = MyList([1, "Betty", "Holberton", 5])
-    >>> my_list.print_sorted()
-    Traceback (most recent call last):
-    TypeError: unorderable types: str() < int()
