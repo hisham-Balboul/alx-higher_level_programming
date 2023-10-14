@@ -2,12 +2,12 @@
 """Defines unittests for base.py.
 
 Unittest classes:
-    TestBase_instantiation - line 23
-    TestBase_to_json_string - line 110
-    TestBase_save_to_file - line 156
-    TestBase_from_json_string - line 234
-    TestBase_create - line 288
-    TestBase_load_from_file - line 340
+    TestBase_instantiation - line 19
+    TestBase_to_json_string - line 55
+    TestBase_save_to_file - line 86
+    TestBase_from_json_string - line 135
+    TestBase_create - line 170
+    TestBase_load_from_file - line 221
 """
 import os
 import unittest
