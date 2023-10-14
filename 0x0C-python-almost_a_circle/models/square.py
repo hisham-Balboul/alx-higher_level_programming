@@ -44,31 +44,31 @@ class Square(Rectangle):
             **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
-            a = 0
+            i = 0
             for arg in args:
-                if a == 0:
+                if ai == 0:
                     if arg is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
-                elif a == 1:
+                elif i == 1:
                     self.size = arg
-                elif a == 2:
+                elif i == 2:
                     self.x = arg
-                elif a == 3:
+                elif i == 3:
                     self.y = arg
-                a += 1
+                i += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
+            for j, k in kwargs.items():
+                if j == "id":
+                    if k is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = v
-                elif k == "size":
-                    self.size = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+                        self.id = k
+                elif j == "size":
+                    self.size = k
+                elif j == "x":
+                    self.x = k
+                elif j == "y":
+                    self.y = k
