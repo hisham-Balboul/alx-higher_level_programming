@@ -2,13 +2,13 @@
 """Defines unittests for models/square.py.
 
 Unittest classes:
-    TestSquare_instantiation - line 24
-    TestSquare_size - line 88
-    TestSquare_x - line 166
-    TestSquare_y - line 238
-    TestSquare_area - line 3
-    TestSquare_update_args - line 426
-    TestSquare_to_dictionary - 640
+    TestSquare_instantiation - line 18
+    TestSquare_size - line 66
+    TestSquare_x - line 89
+    TestSquare_y - line 108
+    TestSquare_area - line 127
+    TestSquare_update - line 143
+    TestSquare_to_dictionary - 283
 """
 import unittest
 from models.base import Base
@@ -140,7 +140,7 @@ class TestSquare_area(unittest.TestCase):
         with self.assertRaises(TypeError):
             s.area(1)
 
-class TestSquare_update_args(unittest.TestCase):
+class TestSquare_update(unittest.TestCase):
     """Unittests for testing update args method of the Square class."""
 
     def test_update_args_zero(self):
@@ -171,7 +171,7 @@ class TestSquare_update_args(unittest.TestCase):
     def test_update_args_more_than_four(self):
         s = Square(10, 10, 10, 10)
         s.update(89, 2, 3, 4, 5)
-        self.assertEqual("[Square] (89) 3/4 - 2", str(s)
+        self.assertEqual("[Square] (89) 3/4 - 2", str(s))
 
     def test_update_args_twice(self):
         s = Square(10, 10, 10, 10)
