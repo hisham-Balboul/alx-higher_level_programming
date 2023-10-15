@@ -12,7 +12,6 @@ Unittest classes:
     TestRectangle_update_args - line 538
     TestRectangle_to_dictionary - line 788
 """
-import sys
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
