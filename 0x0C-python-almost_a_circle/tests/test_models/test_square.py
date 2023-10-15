@@ -3,12 +3,12 @@
 
 Unittest classes:
     TestSquare_instantiation - line 18
-    TestSquare_size - line 66
-    TestSquare_x - line 89
-    TestSquare_y - line 108
-    TestSquare_area - line 127
-    TestSquare_update - line 143
-    TestSquare_to_dictionary - 283
+    TestSquare_size - line 67
+    TestSquare_x - line 91
+    TestSquare_y - line 111
+    TestSquare_area - line 131
+    TestSquare_update - line 148
+    TestSquare_to_dictionary - 289
 """
 import unittest
 from models.base import Base
@@ -63,6 +63,7 @@ class TestSquare_instantiation(unittest.TestCase):
     def test_y_getter(self):
         self.assertEqual(0, Square(10).y)
 
+
 class TestSquare_size(unittest.TestCase):
     """Unittests for testing size initialization of the Square class."""
 
@@ -86,6 +87,7 @@ class TestSquare_size(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(0, 2)
 
+
 class TestSquare_x(unittest.TestCase):
     """Unittests for testing initialization of Square x attribute."""
 
@@ -104,6 +106,7 @@ class TestSquare_x(unittest.TestCase):
     def test_negative_x(self):
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Square(5, -1, 0)
+
 
 class TestSquare_y(unittest.TestCase):
     """Unittests for testing initialization of Square y attribute."""
@@ -124,6 +127,7 @@ class TestSquare_y(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Square(3, 0, -1)
 
+
 class TestSquare_area(unittest.TestCase):
     """Unittests for testing the area method of the Square class."""
 
@@ -139,6 +143,7 @@ class TestSquare_area(unittest.TestCase):
         s = Square(2, 10, 1, 1)
         with self.assertRaises(TypeError):
             s.area(1)
+
 
 class TestSquare_update(unittest.TestCase):
     """Unittests for testing update args method of the Square class."""
@@ -280,6 +285,7 @@ class TestSquare_update(unittest.TestCase):
         s.update(size=5, id=89, a=1, b=54)
         self.assertEqual("[Square] (89) 10/10 - 5", str(s))
 
+
 class TestSquare_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Square class."""
 
@@ -298,6 +304,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()
