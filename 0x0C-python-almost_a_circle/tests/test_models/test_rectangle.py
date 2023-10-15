@@ -2,15 +2,14 @@
 """Defines unittests for models/rectangle.py.
 
 Unittest classes:
-    TestRectangle_instantiation - line 25
-    TestRectangle_width - line 114
-    TestRectangle_height - line 190
-    TestRectangle_x - line 262
-    TestRectangle_y - line 334
-    TestRectangle_order_of_initialization - line 402
-    TestRectangle_area - line 430
-    TestRectangle_update_args - line 538
-    TestRectangle_to_dictionary - line 788
+    TestRectangle_instantiation - line 20
+    TestRectangle_width - line 93
+    TestRectangle_height - line 116
+    TestRectangle_x - line 139
+    TestRectangle_y - line 158
+    TestRectangle_area - line 176
+    TestRectangle_update - line 194
+    TestRectangle_to_dictionary - line 364
 """
 import unittest
 from models.base import Base
@@ -192,7 +191,7 @@ class TestRectangle_area(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.area(1)
 
-class TestRectangle_update_args(unittest.TestCase):
+class TestRectangle_update(unittest.TestCase):
     """Unittests for testing update args method of the Rectangle class."""
 
     def test_update_args_zero(self):
