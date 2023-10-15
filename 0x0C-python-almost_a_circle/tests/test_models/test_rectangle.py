@@ -2,14 +2,14 @@
 """Defines unittests for models/rectangle.py.
 
 Unittest classes:
-    TestRectangle_instantiation - line 20
+    TestRectangle_instantiation - line 19
     TestRectangle_width - line 93
-    TestRectangle_height - line 116
-    TestRectangle_x - line 139
-    TestRectangle_y - line 158
-    TestRectangle_area - line 176
-    TestRectangle_update - line 194
-    TestRectangle_to_dictionary - line 364
+    TestRectangle_height - line 117
+    TestRectangle_x - line 141
+    TestRectangle_y - line 161
+    TestRectangle_area - line 181
+    TestRectangle_update - line 200
+    TestRectangle_to_dictionary - line 370
 """
 import unittest
 from models.base import Base
@@ -113,6 +113,7 @@ class TestRectangle_width(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Rectangle(0, 2)
 
+
 class TestRectangle_height(unittest.TestCase):
     """Unittests for testing initialization of Rectangle height attribute."""
 
@@ -136,6 +137,7 @@ class TestRectangle_height(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(1, 0)
 
+
 class TestRectangle_x(unittest.TestCase):
     """Unittests for testing initialization of Rectangle x attribute."""
 
@@ -154,6 +156,7 @@ class TestRectangle_x(unittest.TestCase):
     def test_negative_x(self):
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Rectangle(5, 3, -1, 0)
+
 
 class TestRectangle_y(unittest.TestCase):
     """Unittests for testing initialization of Rectangle y attribute."""
@@ -174,6 +177,7 @@ class TestRectangle_y(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Rectangle(3, 5, 0, -1)
 
+
 class TestRectangle_area(unittest.TestCase):
     """Unittests for testing the area method of the Rectangle class."""
 
@@ -191,6 +195,7 @@ class TestRectangle_area(unittest.TestCase):
         r = Rectangle(2, 10, 1, 1, 1)
         with self.assertRaises(TypeError):
             r.area(1)
+
 
 class TestRectangle_update(unittest.TestCase):
     """Unittests for testing update args method of the Rectangle class."""
