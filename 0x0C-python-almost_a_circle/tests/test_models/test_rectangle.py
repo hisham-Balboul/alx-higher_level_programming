@@ -9,7 +9,7 @@ Unittest classes:
     TestRectangle_y - line 161
     TestRectangle_area - line 181
     TestRectangle_update - line 200
-    TestRectangle_to_dictionary - line 370
+    TestRectangle_to_dictionary - line 371
 """
 import unittest
 from models.base import Base
@@ -366,6 +366,7 @@ class TestRectangle_update(unittest.TestCase):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(height=5, id=89, a=1, b=54, x=19, y=7)
         self.assertEqual("[Rectangle] (89) 19/7 - 10/5", str(r))
+
 
 class TestRectangle_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Rectangle class."""
